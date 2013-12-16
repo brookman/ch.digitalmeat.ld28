@@ -9,14 +9,13 @@ import com.badlogic.gdx.Gdx;
 
 public class ConcertSmugglers extends Game {
 	public static ConcertSmugglers instance;
-	
+
 	public final Config config;
 	public final Assets assets;
 	public final Random random;
 	public final PlayerController controller;
 	public MapRenderer mapRenderer;
-	
-	
+
 	public InGameScreen inGameScreen;
 
 	private IntroScreen introScreen;
@@ -24,19 +23,19 @@ public class ConcertSmugglers extends Game {
 	public TextManager textManager;
 
 	private MenuScreen menuScreen;
-	
+
 	public boolean running;
-	
-	public ConcertSmugglers(Config config){
-		
+
+	public ConcertSmugglers() {
+
 		instance = this;
 		random = new Random();
-		this.config = config;
+		this.config = new Config(640, 480);
 		this.assets = new Assets();
 		this.controller = new PlayerController();
 		controller.addTrapsToList();
 	}
-	
+
 	@Override
 	public void create() {
 		Gdx.input.setCatchBackKey(true);
@@ -49,7 +48,7 @@ public class ConcertSmugglers extends Game {
 		this.menuScreen = new MenuScreen();
 		PersonAi.buildAi();
 		intro();
-		//game();
+		// game();
 	}
 
 	public void intro() {
@@ -61,13 +60,13 @@ public class ConcertSmugglers extends Game {
 	}
 
 	@Override
-	public void dispose(){
+	public void dispose() {
 		assets.dispose();
 	}
 
 	@Override
-	public void render() {		
-		super.render();		
+	public void render() {
+		super.render();
 	}
 
 	@Override
@@ -82,8 +81,8 @@ public class ConcertSmugglers extends Game {
 	@Override
 	public void resume() {
 	}
-	
-	public void game(){
+
+	public void game() {
 		setScreen(inGameScreen);
 	}
 }

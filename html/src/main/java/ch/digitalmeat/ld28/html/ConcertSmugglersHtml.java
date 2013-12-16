@@ -1,6 +1,6 @@
-package ch.digitalmeat.ld28.core.html;
+package ch.digitalmeat.ld28.html;
 
-import ch.digitalmeat.ld28.core.core.ConcertSmugglers;
+import ch.digitalmeat.ld28.core.ConcertSmugglers;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;

@@ -8,14 +8,13 @@ import ch.digitalmeat.ld28.core.ConcertSmugglers;
 
 public class ConcertSmugglersDesktop {
 	public static void main(String[] args) {
-		Config gameConfig = new Config(640, 480);
 
 		LwjglApplicationConfiguration cfg = new LwjglApplicationConfiguration();
 		cfg.title = "ld28";
 		cfg.useGL20 = true;
-		cfg.width = gameConfig.xResolution;
-		cfg.height = gameConfig.yResolution;
+		cfg.width = 640;
+		cfg.height = 480;
 
-		new LwjglApplication(new ConcertSmugglers(gameConfig), cfg);
+		new LwjglApplication(new ConcertSmugglers(), cfg);
 	}
 }
