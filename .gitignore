@@ -1,2 +1,13 @@
 bin/
+*.class
+.classpath
+.project
+.settings
+*/target
+*/libs
+*/war
+html/src/main/gwt-unitCache
+html/src/main/webapp
+android/*.jar
+*.gwt-log
 # Package Files #
