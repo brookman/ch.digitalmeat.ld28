@@ -9,4 +9,6 @@
 	<entry-point class='ch.digitalmeat.ld28.html.ConcertSmugglersHtml'/>
 	<set-configuration-property name="gdx.assetpath" value="assets" />
 	<set-configuration-property name="gdx.assetoutputpath" value="html/target/webapp" />
+	<extend-configuration-property name="gdx.reflect.include" value="ch.digitalmeat.ld28" />
+	<extend-configuration-property name="gdx.reflect.include" value="com.badlogic.gdx.maps" />
 </module>
