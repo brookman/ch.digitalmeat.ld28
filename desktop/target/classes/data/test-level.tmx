@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="32" height="8" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="test-tiles" tilewidth="32" tileheight="32">
+  <image source="test-tiles.png" width="414" height="414"/>
+ </tileset>
+ <tileset firstgid="145" name="collision_tiles" tilewidth="32" tileheight="32">
+  <image source="collision_tiles.png" width="128" height="128"/>
+  <tile id="8">
+   <properties>
+    <property name="collision" value="left"/>
+   </properties>
+  </tile>
+  <tile id="11">
+   <properties>
+    <property name="collision" value="right"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="161" name="foreground" tilewidth="32" tileheight="32">
+  <image source="foreground.png" width="256" height="256"/>
+ </tileset>
+ <tileset firstgid="417" name="Backgrounds" tilewidth="32" tileheight="32">
+  <image source="Backgrounds.png" width="512" height="512"/>
+ </tileset>
+ <layer name="Background 1" width="32" height="8">
+  <properties>
+   <property name="type" value="bg"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgIA2oMTEwqALxNBJxOhOJFuGw2wyIPYBYC4g1icTaQNwIxIloOBmPm0yBcmFoOAINWxGJfaD2FwHxZCAuhrJbCIRJHlA+FwvOB2IvII4hEnsj2Q9zw2QC9tcC5RbgwfNIxFOw4GYqpIlRQBkAAO9TFHcABAAA
+  </data>
+ </layer>
+ <layer name="Shadow" width="32" height="8" visible="0">
+  <properties>
+   <property name="type" value="bg"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgwA6YcIjDgAYaBgFmAnpIAVJ45KQZUN3HjCSOC2DzDyXuRXcfCwVm4QIgN19jRGBkgBz20lD7pRgw4wQmPxjBYHXXSAIAopQilwAEAAA=
+  </data>
+ </layer>
+ <layer name="Inventory" width="32" height="8">
+  <properties>
+   <property name="type" value="bg"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgoA4QYWJgEAViMSZUcXEgX4IJux5ygCCZZi2H0o5A/U5EmPGckYHhGRA/BuJPQHwDiP8CsSJQLxMZblgPxB+B+gOBeoNI0H8RqOcSEF9mJE79EaC6w0B8EIgXAvEiIF4CxNuBcoxI9hIKx09I+hdD8RJoWIDAHST3gNjGTKjinxkR7E9Y3A4Kxy9E+mkU0A4AABJkae4ABAAA
+  </data>
+ </layer>
+ <layer name="Furniture" width="32" height="8">
+  <properties>
+   <property name="type" value="bg"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgIB2sIEMPNcGGAbDzDSOUwcTAsGMA7EcGjFjE3qMJcjNB6KVA8VXYNACBDAF71gL1rQbiNVB6LdScTUB6IxBvAeLNOMzGBpiBbmIFYhao276SoHcU0AYAAF9NAikABAAA
+  </data>
+ </layer>
+ <layer name="Stuff on Stuff" width="32" height="8">
+  <properties>
+   <property name="type" value="bg"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAWDGVxjhOCBACuB9q4A4mVAvBSIV1HZHd8GyF+jAAEA5WuGDAAEAAA=
+  </data>
+ </layer>
+ <objectgroup name="Entities" width="32" height="8">
+  <properties>
+   <property name="type" value="entity"/>
+  </properties>
+  <object type="player_ticket" x="202" y="137" width="11" height="12">
+   <properties>
+    <property name="" value=""/>
+   </properties>
+   <ellipse/>
+  </object>
+  <object type="guard" x="294" y="138" width="13" height="11">
+   <ellipse/>
+  </object>
+  <object type="guest" x="369" y="140" width="7" height="8">
+   <ellipse/>
+  </object>
+  <object type="guest" x="331" y="137" width="7" height="11">
+   <ellipse/>
+  </object>
+  <object type="player_without_ticket" x="274" y="136" width="5" height="9">
+   <ellipse/>
+  </object>
+  <object type="transport" x="586" y="146" width="11" height="9">
+   <properties>
+    <property name="key" value="elev_bottom"/>
+    <property name="target" value="elev_top"/>
+    <property name="text" value="use elevator"/>
+   </properties>
+  </object>
+  <object type="transport" x="618" y="112" width="11" height="11">
+   <properties>
+    <property name="key" value="elev_top"/>
+    <property name="target" value="elev_bottom"/>
+    <property name="text" value="use elevator"/>
+   </properties>
+  </object>
+  <object type="transport" x="435" y="83" width="8" height="9">
+   <properties>
+    <property name="key" value="leader_bottom"/>
+    <property name="target" value="leader_top"/>
+    <property name="text" value="use leader"/>
+   </properties>
+  </object>
+  <object type="transport" x="435" y="11" width="22" height="15">
+   <properties>
+    <property name="key" value="leader_top"/>
+    <property name="target" value="leader_bottom"/>
+    <property name="text" value="use leader"/>
+   </properties>
+  </object>
+  <object x="440" y="15" width="1"/>
+  <object type="transport" x="458" y="85" width="9" height="10">
+   <properties>
+    <property name="key" value="elev1_top"/>
+    <property name="target" value="elev1_bottom"/>
+    <property name="text" value="use stairs"/>
+   </properties>
+  </object>
+  <object type="transport" x="487" y="113" width="11" height="11">
+   <properties>
+    <property name="key" value="elev1_bottom"/>
+    <property name="target" value="elev1_top"/>
+    <property name="text" value="use stairs"/>
+   </properties>
+  </object>
+  <object type="transport" x="822" y="19" width="20" height="12">
+   <properties>
+    <property name="key" value="leader1_top"/>
+    <property name="target" value="leader1_bottom"/>
+    <property name="text" value="use leader"/>
+   </properties>
+  </object>
+  <object type="transport" x="838" y="115" width="6" height="44">
+   <properties>
+    <property name="key" value="leader1_bottom"/>
+    <property name="target" value="leader1_top"/>
+    <property name="text" value="use leader"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <layer name="Foreground 1" width="32" height="8">
+  <properties>
+   <property name="type" value="fg"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgGAXkgCV0tu8aIyp/DRCvRVOziF6OwQJWAvEqLOJHge4+xohFYhQMCgAAFLyG4AAEAAA=
+  </data>
+ </layer>
+ <layer name="Collision" width="32" height="8">
+  <properties>
+   <property name="type" value="collision"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC2NgIB1MJEPPHDL0DCSYOdAOQAPXGFH5pLiPnLCntf+HWnoYrgAA939nvwAEAAA=
+  </data>
+ </layer>
+</map>

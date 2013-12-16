@@ -1,4 +1,4 @@
-package ch.digitalmeat.ld28;
+package ch.digitalmeat.ld28.core;
 
 import android.os.Bundle;
 import android.view.WindowManager.LayoutParams;

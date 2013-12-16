@@ -1,7 +1,7 @@
-package ch.digitalmeat.ld28.client;
+package ch.digitalmeat.ld28.core.client;
 
-import ch.digitalmeat.ld28.ConcertSmugglers;
-import ch.digitalmeat.ld28.Config;
+import ch.digitalmeat.ld28.core.ConcertSmugglers;
+import ch.digitalmeat.ld28.core.Config;
 
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;

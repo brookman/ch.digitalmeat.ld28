@@ -1,6 +1,6 @@
-package ch.digitalmeat.ld28.android;
+package ch.digitalmeat.ld28.core.android;
 
-import ch.digitalmeat.ld28.core.ConcertSmugglers;
+import ch.digitalmeat.ld28.core.core.ConcertSmugglers;
 
 import android.os.Bundle;
 

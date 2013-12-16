@@ -1,4 +1,4 @@
-package ch.digitalmeat.ld28;
+package ch.digitalmeat.ld28.core;
 
 import org.robovm.cocoatouch.foundation.NSAutoreleasePool;
 import org.robovm.cocoatouch.uikit.UIApplication;
