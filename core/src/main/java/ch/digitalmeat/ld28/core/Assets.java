@@ -60,7 +60,7 @@ public class Assets {
 		manager.load("data/visitor_25.fnt", BitmapFont.class);
 		manager.load("data/uiskin.json", Skin.class);
 		manager.load("data/android_controls.png", Texture.class);
-		manager.load("data/mentex_track_01.wav", Music.class);
+		manager.load("data/mentex_track_01.mp3", Music.class);
 		manager.finishLoading();
 		this.skin = manager.get("data/uiskin.json");
 		ground = manager.get("data/ground.png");
@@ -70,7 +70,7 @@ public class Assets {
 		font_visitor_10 = manager.get("data/visitor_10.fnt");
 		font_visitor_25 = manager.get("data/visitor_25.fnt");
 		sheets = new PersonSheet[PERSON_SPRITES];
-		music = manager.get("data/mentex_track_01.wav");
+		music = manager.get("data/mentex_track_01.mp3");
 		music.setLooping(true);
 		music.setVolume(0.5f);
 		music.play();
