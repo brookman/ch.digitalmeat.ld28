@@ -25,10 +25,6 @@ public class IntroScreen implements Screen {
 		PlayerController c = ConcertSmugglers.instance.controller;
 		c.update();
 		if(c.any){
-			try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-			}
 			Gdx.app.log("", "Update");
 			ConcertSmugglers.instance.game();
 			return;
