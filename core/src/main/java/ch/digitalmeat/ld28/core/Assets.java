@@ -48,8 +48,10 @@ public class Assets {
 		return names[random.nextInt(names.length)];
 	}
 	
+	private TmxMapLoader loader;
 	public void create(){
-		manager.setLoader(TiledMap.class, new TmxMapLoader(new InternalFileHandleResolver()));		
+		loader = new TmxMapLoader(new InternalFileHandleResolver());
+		manager.setLoader(TiledMap.class, loader);		
 		manager.load("data/Persons.png", Texture.class);
 		manager.load("data/PeopleParts.png", Texture.class);
 		manager.load("data/ground.png", Texture.class);
@@ -162,9 +164,7 @@ public class Assets {
 	}
 	
 	public TiledMap loadTilemap(String file){
-		manager.load(file, TiledMap.class);
-		manager.finishLoading();
-		return manager.get(file);
+		return loader.load(Gdx.files.internal(file));
 	}
 	
 	public void dispose(){
