@@ -10,13 +10,13 @@ import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
 public class GwtLauncher extends GwtApplication {
 	@Override
 	public GwtApplicationConfiguration getConfig () {
-		GwtApplicationConfiguration cfg = new GwtApplicationConfiguration(640, 480);
+		GwtApplicationConfiguration cfg = new GwtApplicationConfiguration(480, 320);
 		return cfg;
 	}
 
 	@Override
 	public ApplicationListener getApplicationListener () {
-		Config gameConfig = new Config(640, 480);
+		Config gameConfig = new Config(480, 320);
 		return new ConcertSmugglers(gameConfig);
 	}
 }
