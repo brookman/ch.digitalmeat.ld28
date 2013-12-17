@@ -164,7 +164,7 @@ public class Assets {
 	}
 	
 	public TiledMap loadTilemap(String file){
-		return loader.load(Gdx.files.internal(file));
+		return loader.load(file);
 	}
 	
 	public void dispose(){
